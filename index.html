@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="keywords" content="Document" />
+    <meta name="description" content="Your Description..." />
+    <title>Document</title>
+    <link rel="stylesheet" href="resources/swiper js/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" />
+    <link rel="stylesheet" href="resources/css/loader.css" />
+    <link rel="stylesheet" href="resources/css/hamburger.css" />
+    <link rel="stylesheet" href="resources/css/home.css" />
+    <link rel="stylesheet" href="resources/css/about.css" />
+    <link rel="stylesheet" href="resources/css/services.css">
+    <link rel="stylesheet" href="resources/css/portfolio.css" />
+    <link rel="stylesheet" href="resources/css/blog.css" />
+    <link rel="stylesheet" href="resources/css/contact.css" />
+    <link href="resources/mapbox-gl/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="resources/css/style.css" />
+    <link rel="shortcut icon" href="resources/img/favicon.ico" type="image/x-icon" />
+    <script src="https://kit.fontawesome.com/47f448954b.js" crossorigin="anonymous"></script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </script>
+</head>
+
+<body onload="loaded()">
+    <div class="loader">
+        <div class="c c1"></div>
+        <div class="c c2"></div>
+        <div class="c c3"></div>
+        <div class="c c4"></div>
+        <div class="c c5"></div>
+        <div class="c c6"></div>
+    </div>
+    <script>
+        let loader = document.querySelector(".loader");
+        function loaded() {
+            loader.classList.add("remove");
+            setTimeout(() => {
+                loader.style.display = "none";
+            }, 1000);
+        }
+    </script>
+    <!-- HAMBURGER MENU BUTTON (responsively visible) -->
+    <div class="hamburger">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </div>
+
+    <!-- THE REAL NAVIGATION -->
+    <nav class="navigation">
+        <h1>
+            RATNESH
+            <div></div>
+            <div></div>
+        </h1>
+        <ul>
+            <li><a href="#" onclick="home()">home</a></li>
+            <li>
+                <a href="#" onclick="about(); animate3.play(); animate4.play();">about</a>
+            </li>
+            <li><a href="#" onclick="services(); animate6.play();">services</a></li>
+            <li><a href="#" onclick="portfolio()">portfolio</a></li>
+            <li><a href="#" onclick="blog()">blog</a></li>
+            <li>
+                <a href="#" onclick="contact(); animate5.play()">contact</a>
+            </li>
+        </ul>
+        <p>&copy; 2024 Ratnesh dubey</p>
+    </nav>
+
+    <div class="container">
+        <div class="layer layer1 active">
+            <div class="home main">
+                <div class="canvas_container">
+
+                </div>
+                <div class="content-for-home">
+                    <div class="img-container"></div>
+
+                    <h1 align="center">Hi.. I'M
+                        <samp>Ratnesh Dubey.</samp>
+
+                        <br><samp>Web-Developer</samp> and <samp>UI-UX Desinger</samp>
+                    </h1>
+
+                    <div class="social-icons">
+                        <div class="s-icon">
+                            <a href="https://www.linkedin.com/in/ratneshdubey352">
+                                <i class="fa-brands fa-linkedin"></i>
+
+                            </a>
+                            <div class="s-name">Linkedin</div>
+                        </div>
+                        <div class="s-icon">
+                            <a href="mailto:ratneshdubey352@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <div class="s-name">Email</div>
+                        </div>
+
+                        <div class="s-icon">
+                            <a href="https://github.com/Ratnesh352-Dubey">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <div class="s-name">GitHub</div>
+                        </div>
+                        <div class="s-icon">
+                            <a href="https://wa.me/8169913871">
+                                <i class="fa-brands fa-square-whatsapp"></i>
+                            </a>
+                            <div class="s-name">Whatsapp</div>
+                        </div>
+                        <div class="s-icon">
+                            <a href="https://www.instagram.com/ratnesh.bhardwaj_/">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <div class="s-name">Instagram</div>
+                        </div>
+                        <div class="s-icon">
+                            <a href="#">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <div class="s-name">Tweeter</div>
+                        </div>
+
+                    </div>
+
+                    <div class="side-nav">
+                        <button onclick="about(); animate3.play(); animate4.play();">
+                            <span class="w">W</span>
+                            <span class="tooltip"> why you? </span>
+                        </button>
+                        <button onclick="services(); animate6.play();">
+                            <span class="w">W</span>
+                            <span class="tooltip"> what do you do? </span>
+                        </button>
+                        <button onclick="portfolio()">
+                            <span class="w">W</span>
+                            <span class="tooltip">
+                                what have you done?
+                            </span>
+                        </button>
+                        <button onclick="blog()">
+                            <span class="w">W</span>
+                            <span class="tooltip"> which are free Tools </span>
+                        </button>
+                        <button onclick="contact(); animate5.play()">
+                            <span class="w">W</span>
+                            <span class="tooltip"> where are you? </span>
+                        </button>
+                    </div>
+
+                    <div class="titles-for-side-nav">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="layer layer2">
+            <div class="about main">
+                <!-- SEGMENT FOR STYLING. -->
+                <div class="styling">
+                    <div class="absolute box"></div>
+                    <div class="absolute circle"></div>
+                    <div class="absolute triangle"></div>
+                    <div class="absolute dots">
+                        <div class="dot dot1"></div>
+                        <div class="dot dot2"></div>
+                        <div class="dot dot3"></div>
+                        <div class="dot dot4"></div>
+                        <div class="dot dot5"></div>
+                        <div class="dot dot6"></div>
+                        <div class="dot dot7"></div>
+                        <div class="dot dot8"></div>
+                        <div class="dot dot9"></div>
+                        <div class="dot dot10"></div>
+                        <div class="dot dot11"></div>
+                        <div class="dot dot12"></div>
+                        <div class="dot dot13"></div>
+                        <div class="dot dot14"></div>
+                        <div class="dot dot15"></div>
+                        <div class="dot dot16"></div>
+                        <div class="dot dot17"></div>
+                        <div class="dot dot18"></div>
+                        <div class="dot dot19"></div>
+                        <div class="dot dot20"></div>
+                        <div class="dot dot21"></div>
+                        <div class="dot dot22"></div>
+                        <div class="dot dot23"></div>
+                        <div class="dot dot24"></div>
+                    </div>
+
+
+                </div>
+
+                <!-- REAL CONTENT -->
+                <div class="wrapper">
+                    <div class="face face1">
+                        <div class="content">
+                            <h1>Hello,</h1>
+                            <h1>I'm Ratneh Dubey</h1>
+                            <p class="text">
+                                Versatile professional adept at both web development and UI/UX
+                                design, blending technical expertise with creative flair to deliver
+                                exceptional digital solutions. Skilled in HTML, CSS, JavaScript, and
+                                design tools like Adobe XD and Figma. Passionate about crafting
+                                user-centric designs and seamless web experiences that marry
+                                functionality with aesthetics to drive engagement and satisfaction.
+                            </p>
+                            <a class="button download" href="resources/img/ratnesh dubey resume.pdf"
+                                download="Ratnesh-CV">Download CV</a>
+                            <a class="button hire" href="#" class="hire" onclick="contact();">Hire
+                                Me.</a>
+                        </div>
+                    </div>
+                    <div class="face face2"></div>
+                </div>
+
+                <!-- THE NAVIGATION OF ABOUT -->
+                <nav class="about_nav">
+                    <ul>
+                        <li>
+                            <a class="active" href="#" data-text="one">Skills</a>
+                        </li>
+                        
+                        <li>
+                            <a href="#" data-text="three">Education</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="about_container">
+                    <!-- SKILL BOX -->
+                    <div class="skills">
+                        <div class="skill">
+                            <div class="name">Web Development</div>
+
+                        </div>
+                        <div class="skill">
+                            <div class="name">Logo Design</div>
+                            <!-- <div class="value" style="left: 75%"></div> -->
+
+                        </div>
+                        <div class="skill">
+                            <div class="name">UI/UX Design</div>
+
+                        </div>
+                        <div class="skill">
+                            <div class="name">Bootstrap</div>
+
+                        </div>
+                        <div class="skill">
+                            <div class="name">JAVA</div>
+
+                        </div>
+                        <div class="skill">
+                            <div class="name">Python</div>
+
+                        </div>
+                        <div class="skill">
+                            <div class="name">NodeJS</div>
+
+                        </div>
+                        <div class="skill">
+                            <div class="name">c</div>
+
+                        </div>
+                        <div class="skill">
+                            <div class="name">React</div>
+
+                        </div>
+                        <div class="skill">
+                            <div class="name">Blender/VFX</div>
+
+                        </div>
+                        <div class="skill">
+                            <div class="name">Figma</div>
+
+                        </div>
+                    </div>
+
+                    <!-- EXPERIENCE -->
+                    <div class="experience">
+                        <div class="middle_line"></div>
+                        <div class="cover">
+                            <i class="job_box fas fa-briefcase"></i>
+                            <i class="date">Fresheer</i>
+                            <h2>Mumbai University</h2>
+                            <i class="name_company">Student</i>
+                            <article class="text_hidden">
+                                I am undergraduate  B.E  student 
+                                Currently  in 4th year <br>
+                                i have made some projects for my collage 
+                            </article>
+                        </div>
+                        
+                    </div>
+
+
+                    <div class="education">
+                        <div class="middle_line"></div>
+                        <div class="cover">
+                            <i class="job_box fas fa-book-reader"></i>
+                            <i class="date">2021-2025</i>
+                            <h2>Bachelor of Engineering</h2>
+                            <!-- <h2>Mumbai University</h2> -->
+                            <i class="name_company">Mumbai University,</i>
+                            <article class="text_hidden">
+                                SIES Graduate School Of Technology,<br> Nerul Navi Mumbai
+                            </article>
+                        </div>
+                        <div class="whitespace"></div>
+                        <div class="whitespace"></div>
+                        <div class="cover">
+                            <i class="job_box fas fa-book-reader"></i>
+                            <i class="date">2020 - 2021</i>
+                            <h2>HSC-CBSE</h2>
+                            <i class="name_company">Bharti Vidyapeeth ,Navi Mumbai</i>
+                            
+                        </div>
+                        <div class="whitespace"></div>
+                        <div class="whitespace"></div>
+                        <div class="cover">
+                            <i class="job_box fas fa-book-reader"></i>
+                            <i class="date">2018 - 2019</i>
+                            <h2>SSC-CBSE</h2>
+                            <i class="name_company">Bharti Vidyapeeth ,Navi Mumbai</i>
+                            
+                        </div>
+                        
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="layer layer3">
+            <div class="services main">
+                <!-- <section class="background">
+                        <div class="bg_wrapper"></div>
+                    </section> -->
+                <!-- servisec -->
+
+                <h1 class="sub-tittle">My Services</h1>
+                <div class="services-list">
+                    <div>
+                        <i class="fa-solid fa-crop"></i>
+                        <h2>Web Development</h2>
+                        <p>
+                            In our web development services, we offer comprehensive solutions tailored
+                            to meet your digital needs. Our expertise spans from creating dynamic websites
+                            to robust web applications, utilizing cutting-edge technologies to deliver
+
+                            high-performance solutions. We specialize in front-end development,
+                            ensuring visually appealing and user-friendly interfaces that
+                            captivate your audience. Our back-end development expertise enables
+                            seamless integration of features and functionalities, empowering your website or
+                            application with scalability and reliability
+                            . We prioritize responsive design, guaranteeing optimal performance across devices and
+                            screen sizes.
+                        </p>
+
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-code"></i>
+                        <h2>UI-UX Design</h2>
+                        <p>In our UI/UX design services, we prioritize user-centric
+                            approaches to create seamless digital experiences.
+                            We specialize in crafting intuitive interfaces through
+                            meticulous wireframing and prototyping, allowing for iterative
+                            refinement of design concepts. Our expertise extends to visual
+                            design, ensuring that each element aligns with your brand identity
+                            and user expectations. We emphasize responsive design, guaranteeing
+                            consistent experiences across various devices. Through user testing and
+                            feedback loops, we continuously refine our designs to enhance usability
+                            and satisfaction. Our focus on interaction design ensures that every user
+                            interaction is intuitive and engaging. Additionally, we prioritize accessibility,
+                            ensuring that our designs are inclusive and comply with accessibility standards.
+                            From consultation to implementation, we provide expert guidance to optimize user
+                            experiences and achieve your business objectives.
+                        </p>
+
+                    </div>
+                    <div>
+                        <i class="fa-brands fa-app-store"></i>
+                        <h2>APP Development</h2>
+                        <p>In our app development services, we specialize in crafting
+                            customized solutions that bring your ideas to life on mobile
+                            platforms. From concept to launch, we offer end-to-end development
+                            services, tailored to your specific needs and objectives. Our team of
+                            experienced developers utilizes the latest technologies and industry best
+                            practices to create high-quality native and cross-platform applications.
+                            We focus on user experience, ensuring intuitive interfaces and seamless navigation
+                            to engage and delight your audience. With a keen eye for detail and a commitment to
+                            excellence, we deliver scalable and reliable apps that meet the demands of today's
+                            dynamic
+                            market. Whether you're launching a startup app or expanding your existing digital
+                            presence, we're dedicated to helping you achieve your goals
+                            and stand out in the crowded app marketplace.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- portfolio -->
+        <div class="layer layer4">
+            <div class="portfolio main">
+                <div class="tip main">
+                    
+                </div>
+                <nav class="about_nav padding_top">
+                    <ul>
+                        <li>
+                            <a class="filter active" href="#" data-filter="all">All</a>
+                        </li>
+                        <li>
+                            <a class="filter" href="#" data-filter=".web">Web Design</a>
+                        </li>
+                        <li>
+                            <a class="filter" href="#" data-filter=".logo">Ui-Ux Design</a>
+                        </li>
+                        <li>
+                            <a class="filter" href="#" data-filter=".app">Apps</a>
+                        </li>
+                        <li>
+                            <a class="filter" href="#" data-filter=".icon">Logo</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="mymixcont">
+                    <div class="mix web">
+                        <img src="resources/img/Screenshot (55).jpg" alt="" />
+                        <span class="title">Dementia cure</span>
+                        <a class="port_link" href="https://github.com/Ratnesh352-Dubey/Dementia/tree/main/Dementia-cure-main"><span>View project</span></a>
+                    </div>
+                    <div class="mix web">
+                        <img src="resources/img/Screenshot (69).jpg" alt="" />
+                        <span class="title">Blood Bank Management</span>
+                        <a class="port_link" href="https://github.com/Ratnesh352-Dubey/Blood-bank--management"><span>View project</span></a>
+                    </div>
+                    <div class="mix web">
+                        <img src="resources/img/Screenshot (68).jpg" alt="" />
+                        <span class="title">Portfolio web</span>
+                        <a class="port_link" href="https://github.com/Ratnesh352-Dubey/Ratnesh-Dubey-Portfolio"><span>View project</span></a>
+                    </div>
+                    <div class="mix logo">
+                        <img src="resources/img/Screenshot (71).jpg" alt="" />
+                        <span class="title">Ecommerse Landing page</span>
+                        <a class="port_link" href="#"><span>View project</span></a>
+                    </div>
+                    <!-- <div class="mix logo">
+                        <img src="resources/img/portfolios/logo/2.jpg" alt="" />
+                        <span class="title">Specialisterne</span>
+                        <a class="port_link" href="#"><span>View project</span></a>
+                    </div> -->
+                    <div class="mix logo">
+                        <img src="resources/img/Screenshot (70).jpg" alt="" />
+                        <span class="title">NETFLIX Clone</span>
+                        <a class="port_link" href="https://github.com/Ratnesh352-Dubey/Netflix-ui-ux"><span>View project</span></a>
+                    </div>
+                    <!-- <div class="mix icon">
+                        <img src="resources/img/portfolios/icon/2.jpg" alt="" />
+                        <span class="title">Football FC</span>
+                        <a class="port_link" href="#"><span>View project</span></a>
+                    </div> -->
+                    <!-- <div class="mix logo">
+                        <img src="resources/img/portfolios/logo/5.jpg" alt="" />
+                        <span class="title">Free Notes</span>
+                        <a class="port_link" href="#"><span>View project</span></a>
+                    </div> -->
+                    <div class="mix app">
+                        <img src="resources/img/portfolios/app/3.jpg" alt="" />
+                        <span class="title">Weathery</span>
+                        <span class="port_link">View Project</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    <div class="layer layer5">
+        <div class="testimonial">
+            <h1>
+                <span>Some free Development tools</span>
+            </h1>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="resources/img/2.png" alt="" />
+                        <h4>Project Management Tool</h4>
+                        <div class="rating">
+                            <h3>Trello</h3>
+                        </div>
+                        <p>
+                            <span>&ldquo;</span>
+                            Trello is a visual project management tool that uses boards, lists, and cards to
+                            organize tasks and projects, suitable for workflow management.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="resources/img/2.png" alt="" />
+                        <h4>Web Hosting</h4>
+                        <div class="rating">
+                            <h3>GitHub Pages</h3>
+
+                        </div>
+                        <p>
+                            <span>&ldquo;</span>
+                            GitHub Pages allows you to host static websites directly from your GitHub repository,
+                            ideal for personal or project pages.
+                        </p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="resources/img/2.png" alt="" />
+                        <h4>Database Management</h4>
+                        <div class="rating">
+                            <h3>DBeaver</h3>
+                        </div>
+                        <p>
+                            <span>&ldquo;</span>
+                            DBeaver is a free, open-source database tool that supports multiple database types,
+                            offering features like SQL editing, data browsing, and administration.
+                        </p>
+                    </div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </div>
+    </div>
+    <div class="layer layer6">
+        <div class="contact_us">
+            <div id="map"></div>
+            <address class="info_container">
+                <div class="info info1">
+                    <i class="fas fa-phone-alt"></i>
+                    <span class="iname">Phone</span>
+                    <a href="tel:+8800000000000">8169913871</a>
+                    <!-- <a href="tel:+8811111111111">+8811111111111</a> -->
+                </div>
+                <div class="info info2">
+                    <i class="fas fa-home"></i>
+                    <span class="iname">Address</span>
+                    <a
+                        href="https://www.google.com/maps/place/Navi+Mumbai,+Maharashtra/@19.016279,72.8683485,53561m/data=!3m2!1e3!4b1!4m6!3m5!1s0x3be7b9f0b81f13ad:0x3c12f7681185f869!8m2!3d19.0330488!4d73.0296625!16zL20vMDNqejB6?entry=ttu">
+                        <h3>Navi Mumbai</h3>
+                        <span>Maharashtra,</span><br />
+                        <span>India</span>
+                    </a>
+                </div>
+                <div class="info info3">
+                    <i class="fas fa-envelope"></i>
+                    <span class="iname">Email</span>
+                    <a href="mailto:email1.gmail.com">ratneshdubey352@gmail.co</a>
+                    <!-- <a href="mailto:email2.gmail.com">shuvro2@gmail.com</a> -->
+                </div>
+            </address>
+
+
+            <!-- form -->
+
+            <form id="contact-form" action="https://formspree.io/f/mnqekqzb" method="post">
+                <h1>Get In Touch</h1>
+                <div class="inp_field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" name="name" class="fname" id="fname" placeholder="Full Name" required />
+                </div>
+                <div class="inp_field">
+                    <i class="fas fa-envelope"></i>
+                    <input type="email" name="email" class="email" id="email" placeholder="Email" required />
+                </div>
+                <div class="inp_field">
+                    <i class="fas fa-angle-double-right"></i>
+                    <input type="text" name="subject" class="subject" id="subject" placeholder="Subject" required />
+                </div>
+                <textarea name="message" cols="30" rows="5" class="message" id="message" placeholder="Message" required></textarea>
+                <button type="submit" class="submit" id="submit">Submit</button>
+            </form>
+        
+            <script>
+                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                    event.preventDefault();
+        
+                    const formData = new FormData(this);
+        
+                    fetch('https://formspree.io/f/mnqekqzb', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            alert('Thank you for your message!');
+                            this.reset();
+                        } else {
+                            response.json().then(data => {
+                                if (Object.hasOwn(data, 'errors')) {
+                                    alert(data["errors"].map(error => error["message"]).join(", "));
+                                } else {
+                                    alert('Oops! There was a problem submitting your form');
+                                }
+                            });
+                        }
+                    })
+                    .catch(error => {
+                        alert('Oops! There was a problem submitting your form');
+                    });
+                });
+            </script>
+            
+        </div>
+    </div>
+    </div>
+
+    <!-----------------JQUERY {https://jquery.com/} [USED IN portfolio.js]----------------->
+    <script src="resources/js/jquery.min.js"></script>
+    <!-----------------MIX IT UP {https://www.kunkalabs.com/mixitup/} [USED IN portfolio.js]----------------->
+    <script src="resources/js/mixitup.min.js"></script>
+    <!-----------------SWIPER JS {https://swiperjs.com/} [USED IN portfolio.js, blog.js]----------------->
+    <script src="resources/swiper js/swiper-bundle.min.js"></script>
+    <!-----------------MAPBOX GL {https://www.mapbox.com/} [USED IN contact.js]----------------->
+    <script src="resources/mapbox-gl/mapbox-gl.js"></script>
+    <!-----------------EMAIL JS {https://www.emailjs.com/} [USED IN contact.js]----------------->
+    <script src="resources/js/email.min.js"></script>
+    <!-----------------ADDITIONAL SCRIPT FOR EMAIL JS----------------->
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("user_5OMETIDQ2Nm9qBMtaFNz4");
+        })();
+    </script>
+    <!-----------------VANILLA TILT JS {https://micku7zu.github.io/vanilla-tilt.js/}----------------->
+    <script src="resources/js/vanilla-tilt.min.js"></script>
+    <!-----------------ANIME JS {https://animejs.com/} [USED LOCALLY.]----------------->
+    <script src="resources/js/anime.min.js"></script>
+    <!-----------------LOCAL (HOME)----------------->
+    <script src="resources/js/home.js"></script>
+    <!-----------------LOCAL (ABOUT)----------------->
+    <script src="resources/js/about.js"></script>
+    <!-----------------LOCAL (SERVICES)----------------->
+    <script src="resources/js/services.js"></script>
+    <!-----------------LOCAL (PORTFOLIO)----------------->
+    <script src="resources/js/portfolio.js"></script>
+    <!-----------------LOCAL (BLOG)----------------->
+    <script src="resources/js/blog.js"></script>
+    <!-----------------LOCAL (CONTACT)----------------->
+    <script src="resources/js/contact.js"></script>
+    <!-----------------LOCAL (MAIN FILE)----------------->
+    <script src="resources/js/main.js"></script>
+
+    <!-----------------LOCAL (MAIN FILE { USED TO ANIMATE WEBPAGE.})----------------->
+    <script>
+        const animate1 = anime.timeline({
+            targets: ".circle",
+            loop: true,
+            duration: 2000,
+            direction: "alternate",
+            easing: "easeInOutQuad",
+        });
+        animate1.add({
+            translateX: 350,
+        });
+
+        let dot = document.querySelectorAll(".dot");
+        for (let i = 0; i < dot.length; i++) {
+            const ind = dot[i];
+            const animate2 = anime.timeline({
+                targets: ind,
+                loop: true,
+                direction: "alternate",
+                delay: i * 100,
+            });
+            animate2.add({
+                scale: 2,
+            });
+        }
+
+        let span = document.querySelectorAll(".content .text span");
+        const animate3 = anime.timeline({
+            targets: span,
+            easing: "easeInOutExpo",
+            delay: anime.stagger(20, { direction: "reverse" }),
+            direction: "reverse",
+            autoplay: false,
+        });
+
+        animate3.add({
+            rotate: () => {
+                return anime.random(-360, 360);
+            },
+            translateX: () => {
+                return anime.random(-500, 500);
+            },
+            translateY: () => {
+                return anime.random(-500, 500);
+            },
+            duration: 3000,
+        });
+
+        const animate4 = anime({
+            targets: ".button",
+            scale: [0, 1],
+            delay: anime.stagger(200, { start: 7000 }),
+            autoplay: false,
+        });
+
+        const animate5 = anime({
+            targets: [
+                document.querySelectorAll(".info"),
+                document.querySelectorAll(".inp_field"),
+                ".message",
+                ".submit",
+            ],
+            translateY: [50, 0],
+            rotateX: [90, 0],
+            opacity: [0, 1],
+            delay: anime.stagger(300, { start: 1000 }),
+            duration: 750,
+            autoplay: false,
+            easing: "easeOutQuint",
+        });
+
+        const animate6 = anime({
+            targets: ['.services .t_dummy', '.services .hero-text'],
+            duration: 1000,
+            scaleX: [0, 1],
+            delay: anime.stagger(300, { start: 1000 }),
+            autoplay: false,
+        });
+
+        function resize() {
+            if (window.innerWidth <= 632) {
+                animate5.play();
+                animate3.play();
+                animate4.play();
+                animate6.play();
+            }
+        }
+        resize();
+        window.addEventListener("resize", resize);
+    </script>
+</body>
+
+</html>
